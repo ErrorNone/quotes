@@ -1,0 +1,22 @@
+.nav {
+    position: fixed;
+    width: 100%;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.link {
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+.link:hover{
+    text-decoration: underline;
+}
