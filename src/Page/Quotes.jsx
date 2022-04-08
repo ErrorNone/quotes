@@ -1,23 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import QuotesList from '../Components/QuotesList'
+import Context from '../Context/Context'
 import cl from './Quotes.module.css'
 
 const Quotes = () => {
+  const {philosophers} = useContext(Context)
   return (
     <div className={cl.quotes}>
-      <header>
-        <div>
-          <img src="" alt="" />
-        </div>
-        <div>
-          <h2>name</h2>
-          <h3>age</h3>
-        </div>
-      </header>
-      <main>
-        <div className={cl.container}>
-            
-        </div>
-    </main>
+      <QuotesList philosophers={philosophers}/>
     </div>
     
   )

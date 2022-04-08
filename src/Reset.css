@@ -120,3 +120,7 @@ table {
 * {
   box-sizing: border-box;
 }
+
+.routes {
+  padding-top: 26px;
+}
