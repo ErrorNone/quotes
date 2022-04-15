@@ -3,20 +3,30 @@
     align-items: center;
     flex-direction: column;
     margin: 20px 0;
+    position: relative;
 }
 
+
+
 .text {
+    
     font-size: 20px;
     font-weight: 600;
     color: rgb(151, 35, 35);
     margin-bottom: 10px;
 }
 
+
+
 .date {
+    
     font-size: 16px;
     font-weight: 600;
     color: rgb(151, 35, 35);
 }
+
+
+
 
 .hr {
     height: 1px;
@@ -25,3 +35,30 @@
     background: rgb(88, 88, 88);
     color: rgb(88, 88, 88);
 }
+
+.deliteBtn {
+    border: none;
+    cursor: pointer;
+    width: 16px;
+    height: 2px;
+    background-color: rgb(151, 35, 35);
+    position: absolute;
+    top: 20px;
+    right: -42px;
+    z-index: 1;
+    transform: rotate(45deg);
+}
+
+
+.deliteBtn::after {
+    content: '';
+    width: 16px;
+    height: 2px;
+    background-color: rgb(151, 35, 35);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+

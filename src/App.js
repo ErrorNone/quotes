@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import Context from './Context/Context';
 import Main from './Page/Main';
 import Quotes from './Page/Quotes';
@@ -7,15 +7,16 @@ import Navbar from './UI/Navbar/Navbar';
 import Aristotel from "./Aristotel.jpg"
 import Platon from "./Platon.jpg"
 import Socrat from "./Socrat.jpg"
+
 import { useState } from 'react';
 
 
 function App() {
   
-    const [philosophers, setPlilosophers] = useState([
-      {id: 1, name: 'Аристотель', lifeEars: '384 - 322 г. до н. э.', photo: Aristotel},
-      {id: 2, name: 'Сократ', lifeEars: '469 - 399 г. до н. э.', photo: Socrat},
-      {id: 3, name: 'Платон', lifeEars: '428 - 347 г. до н. э.', photo: Platon}
+    const [philosophers, setPhilosophers] = useState([
+      {id: 1, name: 'Аристотель', lifeYears: '384 - 322 г. до н. э.', photo: Aristotel},
+      {id: 2, name: 'Сократ', lifeYears: '469 - 399 г. до н. э.', photo: Socrat},
+      {id: 3, name: 'Платон', lifeYears: '428 - 347 г. до н. э.', photo: Platon}
     ])
 
     const [quotes, setQuotes] = useState([
@@ -39,13 +40,37 @@ function App() {
         quote: 'Конец войны видели только мёртвые.', year: '385 г. до н. э.'},
     ])
 
+    const addQuote = (newQuotes) => {
+      setQuotes([...quotes, newQuotes])
+    }
+
+    const AddPhilosophers = (newPhilosophers) => {
+      setPhilosophers([...philosophers, newPhilosophers])
+    }
+
+    const deliteQuotes = (id) => {
+     setQuotes(quotes.filter(quot => {
+      if (quot.id !== id) {
+        return quot; 
+      }
+    })) 
+    } 
+
+    // let navigate = useNavigate() 
+    // const GoQuotes = () => {
+    //   navigate("/quotes", {state: quotes.nameId})
+    // }
+    // let location = useLocation()
+    // console.log(location);
+    
   return (
-    <Context.Provider value={{philosophers, quotes}}>
+    <Context.Provider value={{philosophers, quotes, addQuote, deliteQuotes, AddPhilosophers}}>
       <BrowserRouter>
         <Navbar/>
         <Routes>
           <Route path="/main" element={<Main/>} />
-          <Route path="/quotes" element={<Quotes/>}/>
+          <Route path="/quotes/:nameId"  element={<Quotes/>}/>
+          <Route path="*" element={<Main/>} />
         </Routes>
 
       </BrowserRouter>

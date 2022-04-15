@@ -6,7 +6,6 @@ const Navbar = () => {
   return (
     <nav className={cl.nav}>
       <Link className={cl.link} to="/main">Главная</Link>
-      <Link className={cl.link} to="/quotes">Цитаты</Link>
   </nav>
   )
 }
