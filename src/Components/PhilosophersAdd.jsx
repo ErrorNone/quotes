@@ -41,7 +41,7 @@ const PhilosophersAdd = () => {
         </MyForm>
        
       </Modal>
-      <MyButton style={{margin: '20px 0'}} onClick={() => setModal(true)}>Добавить философа</MyButton>
+      <MyButton style={{margin: '20px 0 40px'}} onClick={() => setModal(true)}>Добавить философа</MyButton>
     </div>
   )
 }

@@ -1,0 +1,19 @@
+.img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    animation: img 2s infinite linear;
+}
+
+@keyframes img {
+    from {
+        transform: translate(0, 0) scale(-1, 1);
+    }
+    to {
+        transform: translate(-1000%, -1300% ) scale(-1, 1);;
+    }
+}

@@ -1,4 +1,5 @@
 .li {
+    position: relative;
     margin: 20px;
     padding-bottom: 10px;
     text-align: center;
@@ -9,6 +10,15 @@
 
 .li:hover {
     background-color: rgb(117, 117, 117);
+}
+
+.li:hover .name,
+.li:hover .date {
+    color: rgb(251, 204, 48);
+}
+
+.li:hover .img {
+    filter:blur(5px);
 }
 
 .img {
@@ -41,12 +51,4 @@
     transition: all .2s linear;
 }
 
-.a:hover .name,
-.a:hover .date {
-    color: rgb(251, 204, 48);
-}
-
-.a:hover .img {
-    filter:blur(5px);
-}
 

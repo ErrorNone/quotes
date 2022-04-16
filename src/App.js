@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Context from './Context/Context';
 import Main from './Page/Main';
 import Quotes from './Page/Quotes';
@@ -56,15 +56,16 @@ function App() {
     })) 
     } 
 
-    // let navigate = useNavigate() 
-    // const GoQuotes = () => {
-    //   navigate("/quotes", {state: quotes.nameId})
-    // }
-    // let location = useLocation()
-    // console.log(location);
+    const delitePhil = (id) => {
+     setPhilosophers(philosophers.filter(ph => {
+      if (ph.id !== id) {
+        return ph; 
+      }
+    })) 
+    } 
     
   return (
-    <Context.Provider value={{philosophers, quotes, addQuote, deliteQuotes, AddPhilosophers}}>
+    <Context.Provider value={{philosophers, quotes, addQuote, deliteQuotes, AddPhilosophers, delitePhil}}>
       <BrowserRouter>
         <Navbar/>
         <Routes>
