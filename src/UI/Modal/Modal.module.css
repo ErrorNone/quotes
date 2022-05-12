@@ -21,7 +21,7 @@
   
   .modal__content {
     position: relative;
-    width: 70%;
+    width: 30%;
     height: 30%;
     background: rgb(255, 255, 255);
     z-index: 3;
@@ -31,3 +31,8 @@
     justify-content: center;
   }
   
+  /* @media screen and (max-width: 1450) {
+    .modal__content {
+      width: 50%;
+    }
+  } */
