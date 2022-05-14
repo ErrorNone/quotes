@@ -31,8 +31,26 @@
     justify-content: center;
   }
   
-  /* @media screen and (max-width: 1450) {
+  @media  (max-width: 1400px) {
     .modal__content {
       width: 50%;
     }
-  } */
+  }
+
+  @media  (max-width: 900px) {
+    .modal__content {
+      width: 60%;
+    }
+  }
+
+  @media  (max-width: 770px) {
+    .modal__content {
+      width: 70%;
+    }
+  }
+
+  @media  (max-width: 560px) {
+    .modal__content {
+      width: 90%;
+    }
+  }

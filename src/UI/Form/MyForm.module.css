@@ -7,3 +7,8 @@
     margin: 30px;
 }
 
+@media  (max-width: 560px) {
+    .form  {
+        margin: 15px;
+    }
+  }
