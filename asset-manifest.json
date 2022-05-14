@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/quotes/static/css/main.b264ea09.css",
+    "main.js": "/quotes/static/js/main.803c1342.js",
+    "static/media/Supermen.png": "/quotes/static/media/Supermen.301ef5870575f88afc15.png",
+    "static/media/Socrat.jpg": "/quotes/static/media/Socrat.c37f98a427d6c89fb0b8.jpg",
+    "static/media/Platon.jpg": "/quotes/static/media/Platon.a655da7736dcacc6c81b.jpg",
+    "static/media/Zevs.jpg": "/quotes/static/media/Zevs.98300444828c28506efc.jpg",
+    "static/media/Aristotel.jpg": "/quotes/static/media/Aristotel.8f8e6adb42ce3c268654.jpg",
+    "index.html": "/quotes/index.html",
+    "main.b264ea09.css.map": "/quotes/static/css/main.b264ea09.css.map",
+    "main.803c1342.js.map": "/quotes/static/js/main.803c1342.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b264ea09.css",
+    "static/js/main.803c1342.js"
+  ]
+}
